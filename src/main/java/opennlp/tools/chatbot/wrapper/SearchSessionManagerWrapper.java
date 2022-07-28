@@ -222,6 +222,27 @@ public class SearchSessionManagerWrapper extends SearchSessionManager {
 		//String version = "ver0.8";
 		//LOG.info(version  + " | " + msg); 
 	}
+	
+	@Component @RestxResource
+	public class BotRestApi {
+		
+		SearchSessionManagerWrapper wrapper;
+
+		
+		public BotRestApi()
+		{
+			System.setProperty("log4j.debug", "");
+			wrapper = new SearchSessionManagerWrapper();
+
+		}
+		
+	    @GET("/message")
+	    public Message RespondUsingChatbot(String query) {
+		BotResponse resp = wrapper.runSessionIteraction(query);
+		    
+		    return resp;
+	    }
+	}
 
 	public static void main(String[] args){
 		System.setProperty("log4j.debug", "");
