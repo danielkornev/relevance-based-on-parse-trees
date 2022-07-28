@@ -223,6 +223,7 @@ public class SearchSessionManagerWrapper extends SearchSessionManager {
 		//LOG.info(version  + " | " + msg); 
 	}
 	
+	// example based on RESTX.io
 	@Component @RestxResource
 	public class BotRestApi {
 		
@@ -243,6 +244,8 @@ public class SearchSessionManagerWrapper extends SearchSessionManager {
 		    return resp;
 	    }
 	}
+	
+	// another example: https://habr.com/ru/company/otus/blog/480564/
 
 	public static void main(String[] args){
 		// 1. Add initialization of REST API
