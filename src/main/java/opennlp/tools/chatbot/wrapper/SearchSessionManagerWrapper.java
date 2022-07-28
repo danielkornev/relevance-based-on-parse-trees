@@ -245,6 +245,11 @@ public class SearchSessionManagerWrapper extends SearchSessionManager {
 	}
 
 	public static void main(String[] args){
+		// 1. Add initialization of REST API
+		// 2. Implement mechanism for eithersaving session context inside the chatbot 
+		// OR use a formatter in Dream to send the entire dialog history and send it as a context to the chatbot instance
+		
+		
 		System.setProperty("log4j.debug", "");
 		SearchSessionManagerWrapper wrapper = new SearchSessionManagerWrapper();
 
